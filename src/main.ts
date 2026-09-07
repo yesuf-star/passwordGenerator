@@ -10,7 +10,6 @@ type CharacterOption = {
   element: HTMLInputElement;
   characters: string;
 };
-let age;
 const characterOptions: CharacterOption[] = [
   {
     element: document.querySelector('#uppercase') as HTMLInputElement,
