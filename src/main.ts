@@ -10,7 +10,7 @@ type CharacterOption = {
   element: HTMLInputElement;
   characters: string;
 };
-
+let age;
 const characterOptions: CharacterOption[] = [
   {
     element: document.querySelector('#uppercase') as HTMLInputElement,
@@ -28,7 +28,6 @@ const characterOptions: CharacterOption[] = [
 
 const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 
-// Generate Password
 const generatePassword = (): void => {
   // Get only the checked options
   const selectedCharacters = characterOptions
@@ -49,20 +48,14 @@ const generatePassword = (): void => {
   message.textContent = '';
 };
 
-// Length
 lengthInput.addEventListener('input', () => {
   lengthValue.textContent = lengthInput.value;
 
   generatePassword();
 });
 
-// -----------------------------
-// Generate button
-// -----------------------------
-
 generateBtn.addEventListener('click', generatePassword);
 
-// Copy password
 copyBtn.addEventListener('click', async (): Promise<void> => {
   if (!passwordInput.value) return;
 
