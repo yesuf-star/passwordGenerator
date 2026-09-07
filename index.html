@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Password Generator</title>
+  </head>
+
+  <body>
+    <main class="app">
+      <h1>Password Generator</h1>
+
+      <p class="subtitle">Create a strong and secure password</p>
+
+      <div class="password-box">
+        <input id="password" type="text" readonly />
+        <button id="copyBtn">Copy</button>
+      </div>
+
+      <div class="settings">
+        <div class="length-label">
+          <span>Password Length</span>
+          <span id="lengthValue">12</span>
+        </div>
+
+        <input id="length" type="range" min="6" max="30" value="12" />
+
+        <label class="option">
+          <input id="uppercase" type="checkbox" checked />
+          Uppercase Letters
+        </label>
+
+        <label class="option">
+          <input id="numbers" type="checkbox" checked />
+          Numbers
+        </label>
+
+        <label class="option">
+          <input id="symbols" type="checkbox" checked />
+          Symbols
+        </label>
+      </div>
+
+      <button id="generateBtn">Generate Password</button>
+
+      <p id="message"></p>
+    </main>
+
+    <script type="module" src="src/main.ts"></script>
+  </body>
+</html>
